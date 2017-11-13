@@ -47,7 +47,7 @@ void display(){
 }
 
 //返回 整数的位数 
-unsigned int subf_zheng(float f){
+unsigned int subf_zheng(float f) compact reentrant{
     long longf = (long) f;
     if((longf%10)>0){
         return 1 + subf_zheng(f/10);
@@ -57,7 +57,7 @@ unsigned int subf_zheng(float f){
 }
 
 //返回 小数的位数
-unsigned int subf_xiao(float f){
+unsigned int subf_xiao(float f) compact reentrant{
     long k=(long)f;
     if((f-k)*10>=1){
         return 1 + subf_xiao((f-k)*10);
